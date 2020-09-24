@@ -1,0 +1,40 @@
+.Search .search {
+  display: flex;
+}
+
+.Search .input-group {
+  padding: 0;
+  border: none;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.Search .search-input {
+  border: none;
+  font-size: 14px;
+}
+
+.Search .search-icon {
+  font-size: 14px;
+}
+
+.Search .btn {
+  background: #13547a;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  height: 35px;
+}
+
+.Search .search-button {
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.Search .btn:hover,
+.btn:active,
+.btn:focus {
+  background-color: #176592;
+}

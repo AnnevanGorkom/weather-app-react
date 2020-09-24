@@ -1,0 +1,29 @@
+.Forecast h3 {
+  color: #fff;
+  margin: 5px 0 5px 0;
+}
+
+.Forecast h4 {
+  font-size: 24px;
+  margin: 0;
+  display: inline;
+}
+
+.Forecast p {
+  font-size: 8px;
+}
+
+.Forecast li p {
+  margin: 0;
+}
+
+.Forecast i {
+  font-size: 24px;
+  position: relative;
+  top: 25%;
+}
+
+.Forecast .days-temp {
+  border: none;
+  padding-right: 0;
+}

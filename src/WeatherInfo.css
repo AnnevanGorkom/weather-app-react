@@ -1,0 +1,18 @@
+.WeatherInfo .weather-info {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.WeatherInfo .weather-facts {
+  padding-right: 0;
+}
+
+.WeatherInfo .weather-vars {
+  padding-left: 0;
+}
+
+.WeatherInfo .list-group-item {
+  background: none;
+  padding: 6px;
+}

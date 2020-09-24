@@ -1,0 +1,12 @@
+.Header .card-title {
+  font-size: 32px;
+  position: relative;
+}
+
+.Header #date {
+  font-size: 16px;
+}
+
+.Header #weather-description:first-letter {
+  text-transform: capitalize;
+}
