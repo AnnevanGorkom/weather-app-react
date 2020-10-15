@@ -6,10 +6,18 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <Search />
-      <Today />
-      <Forecast />
+    <div>
+      <div className="App">
+        <Search />
+        <Today />
+        <Forecast />
+      </div>
+      <p className="coded-by">
+        <a href="https://github.com/AnnevanGorkom/weather-app">
+          Open-source code
+        </a>{" "}
+        by Anne van Gorkom
+      </p>
     </div>
   );
 }
