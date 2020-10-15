@@ -9,8 +9,14 @@ function App() {
     <div>
       <div className="App">
         <Search />
-        <Today />
-        <Forecast />
+        <div className="row">
+          <div className="col-9">
+            <Today />
+          </div>
+          <div className="col-3">
+            <Forecast />
+          </div>
+        </div>
       </div>
       <p className="coded-by">
         <a
