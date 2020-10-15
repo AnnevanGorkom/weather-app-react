@@ -8,13 +8,13 @@ export default function Temperature() {
         <i className="today-icon fas fa-cloud"></i>
         <h2>19</h2>
         <p className="degree-type">
-          <a href="#" id="celcius-link" className="active">
-            ºC
-          </a>{" "}
+          {/* <a href="#" id="celcius-link" className="active"> */}
+          ºC
+          {/* </a>{" "}
           |
           <a href="#" id="fahrenheit-link">
             ºF
-          </a>
+          </a> */}
         </p>
       </div>
     </div>

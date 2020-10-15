@@ -13,7 +13,11 @@ function App() {
         <Forecast />
       </div>
       <p className="coded-by">
-        <a href="https://github.com/AnnevanGorkom/weather-app">
+        <a
+          href="https://github.com/AnnevanGorkom/weather-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Open-source code
         </a>{" "}
         by Anne van Gorkom
