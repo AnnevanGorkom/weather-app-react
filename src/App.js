@@ -1,33 +1,32 @@
 import React from "react";
+
 import Search from "./Search";
 import Today from "./Today";
 import Forecast from "./Forecast";
 import "./App.css";
 
 export default function App() {
-  return (
-    <div className="container">
-      <div className="App">
-        <Search />
-        <div className="row">
-          <div className="col-9">
-            <Today />
+    return (
+      <div className="container">
+        <div className="App">
+         <Search />
+         <div className="row">
+            <div className="col-9">
+              <Today defaultCity="Haarlem"/>
+            </div>
+            <div className="col-3">
+              <Forecast />
+           </div>
           </div>
-          <div className="col-3">
-            <Forecast />
-          </div>
-        </div>
-      </div>
-      <p className="coded-by">
-        <a
-          href="https://github.com/AnnevanGorkom/weather-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+       </div>
+        <p className="coded-by">
+          <a
+            href="https://github.com/AnnevanGorkom/weather-app"
+            target="_blank"
+           rel="noopener noreferrer"
+          >
           Open-source code
-        </a>{" "}
-        by Anne van Gorkom
+          </a>{" "}by Anne van Gorkom
       </p>
-    </div>
-  );
+    </div>);
 }

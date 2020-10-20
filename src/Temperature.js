@@ -1,11 +1,11 @@
 import React from "react";
 import "./Temperature.css";
 
-export default function Temperature() {
+export default function Temperature(props) {
   return (
     <div className="Temperature">
       <div className="today-weather">
-        <span className="temp">19</span>
+      <span className="temp">{Math.round(props.newTemp)}</span>
         <p className="degree-type">
           {/* <a href="#" id="celcius-link" className="active"> */}
           ºC
