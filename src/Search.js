@@ -12,7 +12,7 @@ export default function Search() {
               placeholder="Find another city"
               className="form-control search-input"
               id="new-city-input"
-              autoFocus
+              autoFocus="on"
             />
             <button type="submit" className="btn btn-primary search-button">
               <i className="fas fa-search search-icon"></i>

@@ -6,7 +6,7 @@ import "./App.css";
 
 export default function App() {
   return (
-    <div>
+    <div className="container">
       <div className="App">
         <Search />
         <div className="row">
