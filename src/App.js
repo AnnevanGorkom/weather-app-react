@@ -4,7 +4,7 @@ import Today from "./Today";
 import Forecast from "./Forecast";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <div>
       <div className="App">
@@ -31,5 +31,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
