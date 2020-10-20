@@ -39,7 +39,7 @@ export default function WeatherInfo(props) {
           <ul className="list-group list-group-flush">
             <li className="list-group-item" id="wind-direction">{degreesToCompass(props.newWindDir)}
             </li>
-            <li className="list-group-item"><span id="wind-force">{props.newWindForce}</span> km/u
+            <li className="list-group-item"><span id="wind-force">{Math.round(props.newWindForce)}</span> km/u
             </li>
             <li className="list-group-item"><span id="humidity">{props.newHumidity}</span>%
             </li>
