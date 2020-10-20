@@ -1,11 +1,11 @@
-.Temperature h2 {
+.Temperature .temp {
   font-size: 72px;
   display: inline;
 }
 
-.Temperature p.degree-type {
-  display: inline;
+.Temperature .degree-type {
   font-size: 16px;
+  display: inline;
 }
 
 .Temperature .today-weather {

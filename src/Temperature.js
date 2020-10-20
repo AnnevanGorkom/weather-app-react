@@ -5,7 +5,7 @@ export default function Temperature() {
   return (
     <div className="Temperature">
       <div className="today-weather">
-        <h2>19</h2>
+        <span className="temp">19</span>
         <p className="degree-type">
           {/* <a href="#" id="celcius-link" className="active"> */}
           ºC
