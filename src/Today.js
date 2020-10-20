@@ -20,6 +20,7 @@ export default function Today(props) {
       humidity: response.data.main.humidity
     });
   }
+  
   if (weatherData.ready) {
     return (
      <div className="Today">
