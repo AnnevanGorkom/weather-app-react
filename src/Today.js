@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import * as Spinners from 'css-spinners-react';
 
 import Header from "./Header";
 import Temperature from "./Temperature";
@@ -37,6 +38,10 @@ export default function Today(props) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&units=${unit}&appid=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
 
-    return "Loading...";
+    return (
+    <div className="loader">
+      <Spinners.Spinner />
+      <h3>"Loading..."</h3>
+    </div>);
   }
 }
