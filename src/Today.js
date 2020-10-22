@@ -13,6 +13,7 @@ export default function Today(props) {
     setWeatherData({
       ready: true,
       city: response.data.name,
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       temp: response.data.main.temp,
       windDirection: response.data.wind.deg,
@@ -26,7 +27,7 @@ export default function Today(props) {
      <div className="Today">
         <div className="row">
           <div className="col">
-            <Header newCity={weatherData.city} newDescription={weatherData.description} />
+            <Header newCity={weatherData.city} newDate={weatherData.date} newDescription={weatherData.description} />
             <Temperature newTemp={weatherData.temp}/>
             <WeatherInfo newWindDir={weatherData.windDirection} newWindForce={weatherData.windForce} newHumidity={weatherData.humidity}/>
           </div>
