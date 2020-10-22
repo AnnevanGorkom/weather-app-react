@@ -37,11 +37,11 @@ export default function WeatherInfo(props) {
         </div>
         <div className="col weather-info weather-vars">
           <ul className="list-group list-group-flush">
-            <li className="list-group-item" id="wind-direction">{degreesToCompass(props.newWindDir)}
+            <li className="list-group-item" id="wind-direction">{degreesToCompass(props.data.windDirection)}
             </li>
-            <li className="list-group-item"><span id="wind-force">{Math.round(props.newWindForce)}</span> km/u
+            <li className="list-group-item"><span id="wind-force">{Math.round(props.data.windForce)}</span> km/h
             </li>
-            <li className="list-group-item"><span id="humidity">{props.newHumidity}</span>%
+            <li className="list-group-item"><span id="humidity">{props.data.humidity}</span>%
             </li>
           </ul>
         </div>

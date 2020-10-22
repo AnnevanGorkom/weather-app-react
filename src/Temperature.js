@@ -5,7 +5,7 @@ export default function Temperature(props) {
   return (
     <div className="Temperature">
       <div className="today-weather">
-      <span className="temp">{Math.round(props.newTemp)}</span>
+      <span className="temp">{Math.round(props.data.temp)}</span>
         <p className="degree-type">
           {/* <a href="#" id="celcius-link" className="active"> */}
           ºC

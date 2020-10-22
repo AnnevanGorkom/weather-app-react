@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Search.css";
 
-export default function Search() {
+export default function Search(props) {
+  const [city, setCity] = useState(props.defaultCity);
+
+  function search() {
+    
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
   return (
     <div className="Search">
-      <form id="search-city" className="ml-3 mb-3">
+      <form id="search-city" className="ml-3 mb-3" onSubmit={handleSubmit}>
         <div className="row">
           <div className="input-group col-9">
             <input
@@ -13,6 +28,7 @@ export default function Search() {
               className="form-control search-input"
               id="new-city-input"
               autoFocus="on"
+              onChange={handleCityChange}
             />
             <button type="submit" className="btn btn-primary search-button">
               <i className="fas fa-search search-icon"></i>

@@ -1,22 +1,23 @@
 import React from "react";
 
-import Search from "./Search";
+// import Search from "./Search";
 import Today from "./Today";
-import Forecast from "./Forecast";
+// import Forecast from "./Forecast";
 import "./App.css";
 
 export default function App() {
+    let city = "Haarlem";
     return (
       <div className="container">
         <div className="App">
-         <Search />
+         {/* <Search defaultCity={city}/> */}
          <div className="row">
-            <div className="col-9">
-              <Today defaultCity="Haarlem"/>
+            <div className="col">
+              <Today defaultCity={city}/>
             </div>
-            <div className="col-3">
+            {/* <div className="col-3">
               <Forecast />
-           </div>
+            </div> */}
           </div>
        </div>
         <p className="coded-by">
