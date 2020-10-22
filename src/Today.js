@@ -10,7 +10,6 @@ import "./Today.css";
 export default function Today(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
-    console.log(response.data.dt)
     setWeatherData({
       ready: true,
       city: response.data.name,
