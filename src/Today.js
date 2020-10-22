@@ -10,6 +10,7 @@ import "./Today.css";
 export default function Today(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
+    console.log(response.data.dt)
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -33,7 +34,7 @@ export default function Today(props) {
           </div>
         </div>
       </div>
-  );
+    );
   } else {
     const apiKey="94504fb22392e5a384860fde5e24eca5";
     let unit = "metric";
@@ -41,9 +42,9 @@ export default function Today(props) {
     axios.get(apiUrl).then(handleResponse);
 
     return (
-    <div className="loader">
-      <Spinners.Spinner />
-      <h3>"Loading..."</h3>
-    </div>);
+      <div className="loader">
+        <Spinners.Spinner />
+        <h3>"Loading..."</h3>
+      </div>);
   }
 }
