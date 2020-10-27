@@ -12,9 +12,8 @@
   margin: 8px 0 8px 0;
 }
 
-.Temperature .today-icon {
-  font-size: 48px;
-  bottom: 5px;
+.Temperature canvas {
+  margin: 0 8px;
 }
 
 .Temperature .degree-type .active {
