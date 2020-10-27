@@ -1,0 +1,15 @@
+.ForecastPreview h4 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.ForecastPreview li p {
+  font-size: 10px;
+}
+
+.ForecastPreview li {
+  margin: 0;
+  padding: 0 0 4px 0;
+  background-color: transparent;
+  border: none;
+}

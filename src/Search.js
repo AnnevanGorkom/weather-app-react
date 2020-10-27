@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./Search.css";
 
 export default function Search(props) {
@@ -31,6 +32,7 @@ export default function Search(props) {
               onChange={handleCityChange}
             />
             <button type="submit" className="btn btn-primary search-button">
+              <FontAwesomeIcon icon="coffee" />
               <i className="fas fa-search search-icon"></i>
             </button>
           </div>

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import * as Spinners from 'css-spinners-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import Header from "./Header";
 import Temperature from "./Temperature";
@@ -59,6 +61,7 @@ export default function Today(props) {
                 />
                 <button type="submit" className="btn btn-primary search-button">
                   <i className="fas fa-search search-icon"></i>
+                  <FontAwesomeIcon icon={faSearch} />
                 </button>
               </div>
           
@@ -72,12 +75,12 @@ export default function Today(props) {
         </div>
         <div className="Today">
         <div className="row">
-          <div className="col-9">
+          <div className="col-8">
             <Header data={weatherData} />
             <Temperature data={weatherData} />
             <WeatherInfo data={weatherData} />
             </div>
-            <Forecast className="col" />
+            <Forecast className="col" city={weatherData.city}/>
             </div>
          </div>
       </div>

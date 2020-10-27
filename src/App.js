@@ -1,8 +1,5 @@
 import React from "react";
-
-// import Search from "./Search";
 import Today from "./Today";
-// import Forecast from "./Forecast";
 import "./App.css";
 
 export default function App() {
@@ -10,16 +7,12 @@ export default function App() {
     return (
       <div className="container">
         <div className="App">
-         {/* <Search defaultCity={city}/> */}
          <div className="row">
             <div className="col">
               <Today defaultCity={city}/>
             </div>
-            {/* <div className="col-3">
-              <Forecast />
-            </div> */}
           </div>
-       </div>
+        </div>
         <p className="coded-by">
           <a
             href="https://github.com/AnnevanGorkom/weather-app"
@@ -28,6 +21,7 @@ export default function App() {
           >
           Open-source code
           </a>{" "}by Anne van Gorkom
-      </p>
-    </div>);
+        </p>
+      </div>
+    );
 }
