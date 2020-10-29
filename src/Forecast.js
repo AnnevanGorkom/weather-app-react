@@ -20,14 +20,14 @@ export default function Forecast(props) {
       <div className="Forecast">
         <h3>Forecast</h3>
         <ul className="list-group list-group-flush" id="forecast">
-          {forecastInfo.list.slice(0, 5).map(function (forecastItem) {
+          {forecastInfo.list.slice(0,5).map(function (forecastItem) {
             return <ForecastPreview data={forecastItem} />
           })}
         </ul>
       </div>
     );
   } else {
-    const apiKey="94504fb22392e5a384860fde5e24eca5";
+    let apiKey = "94504fb22392e5a384860fde5e24eca5";
     let unit = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&units=${unit}&appid=${apiKey}`;
     axios.get(apiUrl).then(handleForecastResponse);
@@ -35,6 +35,7 @@ export default function Forecast(props) {
     return (
       <div className="Forecast">
         <h3>Forecast</h3>
+        <p>Something went wrong</p>
       </div>
     );
   }

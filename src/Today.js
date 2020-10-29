@@ -13,6 +13,7 @@ import "./Today.css";
 export default function Today(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
+
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -27,21 +28,34 @@ export default function Today(props) {
     });
   }
   
-  
   function search() {
-    const apiKey="94504fb22392e5a384860fde5e24eca5";
+    let apiKey="94504fb22392e5a384860fde5e24eca5";
     let unit = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
   }
 
+  function searchCurrentCity(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let apiKey = "94504fb22392e5a384860fde5e24eca5";
+    let metricUnit = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=${metricUnit}&appid=${apiKey}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+  
   function handleSubmit(event) {
     event.preventDefault();
     search();
   }
-
+  
   function handleCityChange(event) {
     setCity(event.target.value);
+  }
+  
+  function handleCurrentCity(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchCurrentCity);
   }
   
   if (weatherData.ready) {
@@ -66,7 +80,7 @@ export default function Today(props) {
               </div>
           
               <div className="col">
-                <button className="btn btn-primary" id="current-city">
+                <button className="btn btn-primary" id="current-city" onClick={handleCurrentCity}>
                   Current city
                 </button>
               </div>
