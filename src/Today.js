@@ -104,7 +104,7 @@ export default function Today(props) {
       return (
       <div className="loader">
         <Spinners.Spinner />
-        <h3>"Loading..."</h3>
+        <h3>Loading...</h3>
       </div>);
   }
 }
